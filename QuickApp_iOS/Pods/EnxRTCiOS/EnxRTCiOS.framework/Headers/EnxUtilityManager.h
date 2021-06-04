@@ -47,6 +47,7 @@ typedef NS_ENUM(NSInteger, EnxCustomeEventType) {
     Info,
     Debug,
     Warning,
+    Success,
 };
 
 typedef enum {
@@ -70,6 +71,10 @@ typedef NS_OPTIONS(NSUInteger, LOG_MODE_MASK) {
 @property(nonatomic,strong) NSString *previousNetwork;
 @property(nonatomic,readonly,strong) EnxRoom *mRoom;
 @property(nonatomic)BOOL isNoNetwork;
+@property(nonatomic,readonly,strong) NSString *sdkVersion;
+@property(nonatomic,readonly,strong) NSString *osVersion;
+@property(nonatomic,readonly,strong) NSString *deviceName;
+
 
 +(EnxUtilityManager*)shareInstance;
 -(BOOL)setAudioDevice:(NSString*)name;
@@ -90,6 +95,13 @@ typedef NS_OPTIONS(NSUInteger, LOG_MODE_MASK) {
 /*These two variables used in enxclient class only*/
 -(NSMutableArray *)getMessageQueue;
 -(NSMutableArray *)geticeServers;
+-(void)setSDKVersion:(NSString* _Nonnull)version;
+-(NSString *_Nonnull)getSDKVersion;
+-(NSString*_Nonnull)getOsVersion;
+-(NSString*_Nonnull)getDeviceName;
+
+/*PreCall Test API*/
+-(void)clientDiagnostics:(NSDictionary *_Nonnull)options;
 
 /* Property And Methods for client Loger */
 ///-----------------------------------

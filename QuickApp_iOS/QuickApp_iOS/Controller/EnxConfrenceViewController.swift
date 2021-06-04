@@ -14,6 +14,8 @@ import SVProgressHUD
 class EnxConfrenceViewController: UIViewController {
     @IBOutlet weak var sendLogBtn: UIButton!
      @IBOutlet weak var cameraBTN: UIButton!
+    @IBOutlet weak var speakerBTN: UIButton!
+    
     @IBOutlet weak var publisherNameLBL: UILabel!
     @IBOutlet weak var subscriberNameLBL: UILabel!
     @IBOutlet weak var messageLBL: UILabel!
@@ -236,11 +238,11 @@ class EnxConfrenceViewController: UIViewController {
             return
         }
         if sender.isSelected {
-            remoteRoom.switchMediaDevice("Speaker")
+            remoteRoom.switchMediaDevice("EARPIECE")
             sender.isSelected = false
         }
         else{
-            remoteRoom.switchMediaDevice("EARPIECE")
+            remoteRoom.switchMediaDevice("Speaker")
             sender.isSelected = true
         }
     }
@@ -515,6 +517,8 @@ extension EnxConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
      */
     func room(_ room: EnxRoom?, didPublishStream stream: EnxStream?) {
         //To Do
+        remoteRoom.switchMediaDevice("Speaker")
+        speakerBTN.isSelected = true
     }
     /*
      This Delegate will notify to  User Once he Unpublisg Stream

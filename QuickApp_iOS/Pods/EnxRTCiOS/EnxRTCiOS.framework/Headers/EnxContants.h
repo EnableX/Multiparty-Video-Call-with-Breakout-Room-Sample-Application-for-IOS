@@ -266,6 +266,12 @@
 #define kStartScreenShareStartted                 @"StartScreenShareStarted"
 #define kStopScreenShareInProgress               @"StopScreenShareInProgress"
 
+/* Speaker- Notification*/
+#define kStartSpeakerNotification                         @"StartSpeaker-Notification"
+#define kStartSpeakerNotificationInProgress               @"StartSpeaker-NotificationInProgress"
+#define kStartSpeakerNotificationStartted                 @"StartSpeaker-NotificationStarted"
+#define kStopSpeakerNotificationInProgress                @"StopSpeaker-NotificationInProgress"
+
 
 #endif /* EnxContants_h */
 

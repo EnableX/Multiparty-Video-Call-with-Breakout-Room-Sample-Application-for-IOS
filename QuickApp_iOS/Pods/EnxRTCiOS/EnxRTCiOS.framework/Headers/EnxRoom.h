@@ -1229,6 +1229,28 @@ didFileUploadCancelled:(NSArray *_Nullable)data;
  */
 -(void)room:(EnxRoom *_Nullable)room diduserAwaited:(NSArray *_Nullable)data;
 
+/**
+ Fired for ACK for Talker subscribe notification option
+ @param room Instance of the room where event happen.
+ @param data ACK  information of Talker notification.
+ @details This delegate called for Talker notification subscribe
+ */
+
+- (void)room:(EnxRoom *_Nullable)room didAckSubscribeTalkerNotification:(NSArray *_Nullable)data;
+/**
+ Fired for ACK for Talker unsubscribe notification option
+ @param room Instance of the room where event happen.
+ @param data ACK  information of Talker notification.
+ @details This delegate called for Talker notification unsubscribe updates.
+ */
+- (void)room:(EnxRoom *_Nullable)room didAckUnsubscribeTalkerNotification:(NSArray *_Nullable)data;
+/**
+ Fired for giving all list of active speaker details
+ @param room Instance of the room where event happen.
+ @param data  information of active speker.
+ @details This delegate called for Talker notification subscribe/unsubscribeupdates.
+ */
+-(void)room:(EnxRoom *_Nullable)room didTalkerNotification:(NSArray *_Nullable)data;
 
 @end
 @protocol EnxRoomFaceXDelegate <NSObject>
@@ -2017,5 +2039,14 @@ didFileUploadCancelled:(NSArray *_Nullable)data;
     @details App user will used this method to deny  to get in any user in knock -knock based room
  */
 -(void)denyAwaitedUser:(NSString *_Nonnull)clientId;
+
+
+/**
+ Client endpoint can set options at room level. to set Talker Event option after join room
+@param data contain the details information for either subscribe and unsubicribe Talker Events
+ */
+
+-(void)subscribeForTalkerNotification:(BOOL)enable;
+
 @end
 

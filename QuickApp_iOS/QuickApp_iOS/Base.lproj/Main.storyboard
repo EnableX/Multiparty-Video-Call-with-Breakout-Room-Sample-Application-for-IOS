@@ -97,7 +97,7 @@
                                             <outlet property="delegate" destination="W7b-Lx-8Us" id="uMq-ZG-tbG"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="605b145d5264ab73f0a264db" borderStyle="roundedRect" placeholder="Enter Room Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SM1-PA-zei">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Room Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SM1-PA-zei">
                                         <rect key="frame" x="20" y="174" width="240" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="DWK-wL-RvC"/>
@@ -514,6 +514,7 @@
                         <outlet property="optionsView" destination="k5m-a3-cLi" id="QN7-lx-nBB"/>
                         <outlet property="publisherNameLBL" destination="JCW-8v-JB7" id="P62-5n-naC"/>
                         <outlet property="sendLogBtn" destination="fSU-Zl-45h" id="hHH-hn-MZv"/>
+                        <outlet property="speakerBTN" destination="XQJ-X3-9gT" id="LRH-PV-cDv"/>
                         <segue destination="2zk-ZH-m7h" kind="popoverPresentation" identifier="BreakOutPopOver" popoverAnchorView="OVk-Vf-TkV" id="HLD-Ie-PCe">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>

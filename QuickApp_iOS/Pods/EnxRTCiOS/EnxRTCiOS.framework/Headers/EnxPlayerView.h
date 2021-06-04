@@ -178,4 +178,11 @@ typedef NS_ENUM(NSInteger, TextPosition) {
  */
 -(void)showAndHidePinged:(BOOL)flag;
 
+/**
+ show/hide Speaker Notification icon
+ @param flag true/false
+ @details this  API used by customer/Enxroom to show/hide Speaker Notification icon based on flag.
+ */
+-(void)showAndHideSpeakerNotification:(BOOL)flag;
+
 @end
