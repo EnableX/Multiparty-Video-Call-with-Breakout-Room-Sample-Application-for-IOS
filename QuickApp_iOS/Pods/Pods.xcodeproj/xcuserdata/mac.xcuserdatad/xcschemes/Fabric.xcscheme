@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1240"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D20AAA66D50492B40D0660D2A53A67FC"
-               BuildableName = "Pods_QuickApp_iOSTests.framework"
-               BlueprintName = "Pods-QuickApp_iOSTests"
+               BlueprintIdentifier = "ABB048B191245233986A7CD75FE412A5"
+               BuildableName = "Fabric"
+               BlueprintName = "Fabric"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
